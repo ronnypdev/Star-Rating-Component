@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        DMsans: ["Merriweather", "serif"],
+        Merriweather: ["Merriweather", "serif"],
         Poppins: ["Poppins", "sans-serif"],
       },
       colors: {

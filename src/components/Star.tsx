@@ -1,7 +1,9 @@
 export default function Star() {
   return (
     <>
-      <div>Star</div>
+      <div>
+        Star
+      </div>
     </>
   )
 }
