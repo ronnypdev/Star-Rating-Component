@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        DMsans: ["Merriweather", "serif"],
+        Poppins: ["Poppins", "sans-serif"],
+      },
+      colors: {
+        startYellow: "var(--star-yellow)",
+        darkBlue: "var(--dark-blue)",
+        darkGray: "var(--dark-gray)",
+        paleBlue: "var(--pale-blue)",
+      }
+    },
   },
   plugins: [],
 }
