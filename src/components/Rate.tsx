@@ -2,7 +2,7 @@ import Star from "./Star"
 
 export default function Rate() {
 
-  const starElement = [...Array(5)].map((_, index) => (
+  const starElement: JSX.Element[] = [...Array(5)].map((_, index) => (
     <Star
       key={index}
       startAltTextFilled="Star Icon Fill Yellow"
