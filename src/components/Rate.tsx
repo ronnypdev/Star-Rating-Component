@@ -10,6 +10,8 @@ export default function Rate() {
     />
   ));
 
+  console.log("starElement: ", starElement.length)
+
   return (
     <>
       <article className="w-[647px] h-[310px] flex flex-col justify-center items-center p-16 gap-8 bg-white rounded-2xl shadow-lg">
