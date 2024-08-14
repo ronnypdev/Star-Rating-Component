@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import starEmpty from "../assets/images/star_empty.svg";
 import starFilled from "../assets/images/star_filled.svg";
+import { nanoid } from 'nanoid';
 
 type Rate = {
   rating: number,
@@ -17,6 +18,7 @@ export default function Rate({
 }: Rate) {
   const [star, setStar] = useState<boolean>(false);
   const [hoverStar, setHoverStar] = useState<boolean>(false);
+  // const starImgRef = useRef(null)
 
   function handleStarToggle(): void {
     setStar(prevStar => !prevStar);
@@ -34,11 +36,11 @@ export default function Rate({
   const starElement: JSX.Element[] = [...Array(5)].map((_, index) => (
     <img className="cursor-pointer"
       key={index}
-      src={star || hoverStar ? starFilled : starEmpty}
+      src={star ? starFilled : starEmpty}
       onClick={handleStarToggle}
       onMouseEnter={handleFilledStarHover}
       onMouseLeave={handleEmptyStarHover}
-      alt={star || hoverStar ? startAltTextFilled : startAltTextEmpty}
+      alt={star ? startAltTextFilled : startAltTextEmpty}
       width={80}
       height={80}
     />
