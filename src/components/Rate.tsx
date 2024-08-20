@@ -19,7 +19,6 @@ export default function Rate({
 
   const starElement: JSX.Element[] = [...Array(5)].map((_, index) => {
     const currentRating = index + 1;
-    console.log("currentRating", currentRating)
     return (
       <>
         <img className="cursor-pointer"
@@ -47,6 +46,7 @@ export default function Rate({
         </div>
         <p className="font-Poppins text-sm font-normal leading-normal text-darkGray">
           We apologize for the inconvenience you experienced. We appreciate your feedback and would like to work with you to address any issues.
+          {rating}
         </p>
       </article>
     </>
