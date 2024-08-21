@@ -21,15 +21,13 @@ export default function Rate({
     const currentRating = index + 1;
     return (
       <>
-        <img className="cursor-pointer"
+        <img className="cursor-pointer max-w-full w-[45px] h-[45px] md:w-[80px] md:h-[80px]"
           key={index}
           src={currentRating <= (hoverStar! || rating!) ? starFilled : starEmpty}
           onClick={() => setRating(currentRating)}
           alt={currentRating <= (hoverStar! || rating!) ? startAltTextFilled : startAltTextEmpty}
           onMouseEnter={() => setHoverStar(currentRating)}
           onMouseLeave={() => setHoverStar(null)}
-          width={80}
-          height={80}
         />
       </>
     )
@@ -54,8 +52,8 @@ export default function Rate({
 
   return (
     <>
-      <article className="w-[647px] h-[310px] flex flex-col justify-center items-center p-16 gap-8 bg-white rounded-2xl shadow-lg">
-        <h3 className="text-darkBlue text-center font-Merriweather text-2xl leading-normal font-bold">
+      <article className="w-full max-w-full md:w-[647px] h-[310px] flex flex-col justify-center items-center p-16 gap-8 bg-white rounded-2xl shadow-lg">
+        <h3 className="text-darkBlue text-center font-Merriweather text-lg md:text-2xl leading-normal font-bold">
           {ratingQuestion}
         </h3>
         <div className="flex justify-between items-center w-full max-w-full">
